@@ -11,8 +11,8 @@ local function check()
 		return nil
 	end
 	-- check if tsz command exists
-	if vim.fn.executable("tsz -h") == 0 or vim.fn.executable("tsz") == 0 then
-		vim.api.nvim_err_writeln("nvim-trzsz: tsz or tsz command not found")
+	if vim.fn.executable("tsz") == 0 or vim.fn.executable("trz") == 0 then
+		vim.api.nvim_err_writeln("nvim-trzsz: trz or tsz command not found")
 		return nil
 	end
 	local status, api = pcall(require, "nvim-tree.api")
@@ -65,10 +65,6 @@ function M.nvim_tree_trz()
 	-- refresh the tree
 	api.tree.reload()
 end
-
--- Register commands
-vim.api.nvim_create_user_command("NvimTreeTsz", "lua require'nvim-trzsz'.nvim_tree_tsz()", { nargs = 0 })
-vim.api.nvim_create_user_command("NvimTreeTrz", "lua require'nvim-trzsz'.nvim_tree_trz()", { nargs = 0 })
 
 -- Setup function
 function M.setup(opts)
