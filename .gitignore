@@ -1,0 +1,30 @@
+# Lua
+*.o
+*.so
+*.dll
+luac.out
+
+# Neovim
+.netrwhist
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor/IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Project specific
+node_modules/

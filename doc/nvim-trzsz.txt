@@ -1,0 +1,80 @@
+*nvim-trzsz.txt*   Trzsz integration for Neovim
+
+================================================================================
+CONTENTS                                                        *nvim-trzsz-contents*
+
+1. Introduction ........................... |nvim-trzsz-introduction|
+2. Requirements ........................... |nvim-trzsz-requirements|
+3. Installation .......................... |nvim-trzsz-installation|
+4. Usage ................................. |nvim-trzsz-usage|
+5. Configuration ......................... |nvim-trzsz-config|
+6. Commands .............................. |nvim-trzsz-commands|
+
+================================================================================
+1. Introduction                                            *nvim-trzsz-introduction*
+
+nvim-trzsz is a Neovim plugin that integrates trzsz functionality into Neovim,
+allowing for easy file transfers between local and remote systems directly from
+your terminal.
+
+================================================================================
+2. Requirements                                            *nvim-trzsz-requirements*
+
+- Neovim >= 0.10.0
+- A terminal that supports trzsz (see: https://github.com/trzsz/trzsz#supported-terminals)
+- Must be used within an SSH session (does not work in local terminals)
+- trzsz-ssh installed on your local machine
+- nvim-tree.lua (optional, for file explorer integration)
+
+================================================================================
+3. Installation                                           *nvim-trzsz-installation*
+Using lazy.nvim: >
+    {
+        "BrightXiaohan/nvim-trzsz",
+        dependencies = {
+            {"nvim-tree/nvim-tree.lua"}
+        },
+    }
+<
+
+================================================================================
+4. Usage                                                         *nvim-trzsz-usage*
+
+The plugin provides commands for uploading and downloading files through nvim-tree
+integration or direct commands:
+
+Recommended key mappings: >
+    vim.keymap.set("n", "t", "<cmd>NvimTreeTrz<CR>", {noremap = true, silent = true})
+    vim.keymap.set("n", "s", "<cmd>NvimTreeTsz<CR>", {noremap = true, silent = true})
+<
+
+With nvim-tree:
+1. Open nvim-tree
+2. Navigate to the target file/directory
+3. Press 't' to upload or 's' to download files
+
+For uploading files:
+- Navigate to the target directory in nvim-tree
+- Press 's' to open the file explorer
+- Select the files you want to upload
+
+For downloading files:
+- Navigate to the target directory in nvim-tree
+- Press 't' to open the file explorer
+- Select the files you want to download
+
+================================================================================
+5. Configuration                                               *nvim-trzsz-config*
+
+No configuration is required by default. The plugin works out of the box.
+
+================================================================================
+6. Commands                                                    *nvim-trzsz-commands*
+:NvimTreeTrz                                                         *:NvimTreeTrz*
+    Download files from remote to local system using nvim-tree integration.
+
+:NvimTreeTsz                                                         *:NvimTreeTsz*
+    Upload files from local to remote system using nvim-tree integration.
+
+================================================================================
+vim:ft=help:tw=78:ts=8:sw=4:sts=4:norl:
