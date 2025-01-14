@@ -33,19 +33,19 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 ## Basic Usage
 Map the commands to your preferred keybindings:
 ```lua
-vim.keymap.set("n", "t", "<cmd>require('nvim-trzsz').nvim_tree_trz()<cr>", {noremap = true, silent = true})
-vim.keymap.set("n", "s", "<cmd>require('nvim-trzsz').nvim_tree_tsz()<cr>", {noremap = true, silent = true})
+vim.keymap.set("n", "<leader>r", "<cmd>require('nvim-trzsz').nvim_tree_trz()<cr>", {noremap = true, silent = true})
+vim.keymap.set("n", "<leader>s", "<cmd>require('nvim-trzsz').nvim_tree_tsz()<cr>", {noremap = true, silent = true})
 ```
-Here `t` is for uploading files and `s` is for downloading files.
+Here `<leader>r` is for uploading files and `<leader>s` is for downloading files.
 
 - ssh into a remote server
 - Open neovim and nvim-tree
 - Navigate to the file you want to download in nvim-tree
-- Press `t` to upload the file or `s` to download the file
+- Press `<leader>r` to upload the file
 
 or 
 - Navigate to the directory you want to upload files to in nvim-tree
-- Press `s`, and the file explorer will open
+- Press `<leader>s`, and the file explorer will open
 - Select the files you want to upload
 
 ## License

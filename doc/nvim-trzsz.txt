@@ -44,24 +44,14 @@ The plugin provides commands for uploading and downloading files through nvim-tr
 integration or direct commands:
 
 Recommended key mappings: >
-    vim.keymap.set("n", "t", "<cmd>require('nvim-trzsz').nvim_tree_trz()<cr>", {noremap = true, silent = true})
-    vim.keymap.set("n", "s", "<cmd>require('nvim-trzsz').nvim_tree_tsz()<cr>", {noremap = true, silent = true})
+    vim.keymap.set("n", "<leader>r", "<cmd>require('nvim-trzsz').nvim_tree_trz()<cr>", {noremap = true, silent = true})
+    vim.keymap.set("n", "<leader>s", "<cmd>require('nvim-trzsz').nvim_tree_tsz()<cr>", {noremap = true, silent = true})
 <
 
 With nvim-tree:
 1. Open nvim-tree
 2. Navigate to the target file/directory
-3. Press 't' to upload or 's' to download files
-
-For uploading files:
-- Navigate to the target directory in nvim-tree
-- Press 's' to open the file explorer
-- Select the files you want to upload
-
-For downloading files:
-- Navigate to the target directory in nvim-tree
-- Press 't' to open the file explorer
-- Select the files you want to download
+3. Press '<leader>r' to upload or '<leader>s' to download files
 
 ================================================================================
 5. Configuration                                               *nvim-trzsz-config*
