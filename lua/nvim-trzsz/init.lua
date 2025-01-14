@@ -66,6 +66,10 @@ function M.nvim_tree_trz()
 	api.tree.reload()
 end
 
+-- Register commands
+vim.api.nvim_create_user_command("NvimTreeTsz", "lua require'nvim-trzsz'.nvim_tree_tsz()", { nargs = 0 })
+vim.api.nvim_create_user_command("NvimTreeTrz", "lua require'nvim-trzsz'.nvim_tree_trz()", { nargs = 0 })
+
 -- Setup function
 function M.setup(opts)
 	M.config = vim.tbl_deep_extend("force", M.config, opts or {})
