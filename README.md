@@ -17,6 +17,7 @@ Demo Upload File:
 - Make sure your terminal supports trzsz. You can check the supported terminals [here](https://github.com/trzsz/trzsz#supported-terminals).
 - Make sure you are working in a ssh session. trzsz does not work in local terminals.
 - Install trzsz-ssh on your local machine. You can find the installation instructions [here](https://github.com/trzsz/trzsz-ssh).
+- Install trzsz on your remote machine. [trzsz installation guide](https://github.com/trzsz/trzsz-ssh/blob/main/README.en.md#support-trzsz)
 
 ## Installation
 
@@ -47,6 +48,10 @@ or
 - Navigate to the directory you want to upload files to in nvim-tree
 - Press `<leader>s`, and the file explorer will open
 - Select the files you want to upload
+
+## TODO
+- [ ] Automatically install trzsz on the remote machine.
+- [ ] Lua API for more customization.
 
 ## License
 MIT
