@@ -33,8 +33,8 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 ## Basic Usage
 Map the commands to your preferred keybindings:
 ```lua
-vim.keymap.set("n", "t", "<cmd>NvimTreeTrz<CR>", {noremap = true, silent = true})
-vim.keymap.set("n", "s", "<cmd>NvimTreeTsz<CR>", {noremap = true, silent = true})
+vim.keymap.set("n", "t", "<cmd>require('nvim-trzsz').nvim_tree_trz()<cr>", {noremap = true, silent = true})
+vim.keymap.set("n", "s", "<cmd>require('nvim-trzsz').nvim_tree_tsz()<cr>", {noremap = true, silent = true})
 ```
 Here `t` is for uploading files and `s` is for downloading files.
 

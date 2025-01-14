@@ -44,8 +44,8 @@ The plugin provides commands for uploading and downloading files through nvim-tr
 integration or direct commands:
 
 Recommended key mappings: >
-    vim.keymap.set("n", "t", "<cmd>NvimTreeTrz<CR>", {noremap = true, silent = true})
-    vim.keymap.set("n", "s", "<cmd>NvimTreeTsz<CR>", {noremap = true, silent = true})
+    vim.keymap.set("n", "t", "<cmd>require('nvim-trzsz').nvim_tree_trz()<cr>", {noremap = true, silent = true})
+    vim.keymap.set("n", "s", "<cmd>require('nvim-trzsz').nvim_tree_tsz()<cr>", {noremap = true, silent = true})
 <
 
 With nvim-tree:
