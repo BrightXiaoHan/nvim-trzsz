@@ -10,8 +10,8 @@ You can find detailed documentation [here](https://github.com/trzsz/trzsz#suppor
 - Works with tmux sessions.
 - Directory support.
 
-Demo:
-
+Demo Upload File:
+![Demo Upload File](https://i.ibb.co/ThXnGyG/2025-01-14-16-49-14-2025-01-14-16-57-25.gif)
 
 ## Pre-requisites
 - Make sure your terminal supports trzsz. You can check the supported terminals [here](https://github.com/trzsz/trzsz#supported-terminals).
