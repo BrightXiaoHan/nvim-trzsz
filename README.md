@@ -6,6 +6,7 @@ You can find detailed documentation [here](https://github.com/trzsz/trzsz#suppor
 
 ## Features
 - Upload and download files in your ssh session.
+- Open file manager in local environment.
 - nvim-tree integration.
 - Works with tmux sessions.
 - Directory support.
@@ -36,18 +37,35 @@ Map the commands to your preferred keybindings:
 ```lua
 vim.keymap.set("n", "<leader>r", "<cmd>require('nvim-trzsz').nvim_tree_trz()<cr>", {noremap = true, silent = true})
 vim.keymap.set("n", "<leader>s", "<cmd>require('nvim-trzsz').nvim_tree_tsz()<cr>", {noremap = true, silent = true})
+vim.keymap.set("n", "<leader>o", "<cmd>require('nvim-trzsz').nvim_tree_open()<cr>", {noremap = true, silent = true})
 ```
-Here `<leader>r` is for uploading files and `<leader>s` is for downloading files.
 
+### Remote Environment (SSH Session)
+- `<leader>r` - Upload files from local to remote (trz)
+- `<leader>s` - Download files from remote to local (tsz)
+
+### Local Environment
+- `<leader>r` - Copy current file/directory to destination directory
+- `<leader>s` - Select file/directory to copy to current location
+- `<leader>o` - Open file manager at current directory
+
+### Usage Examples
+
+**Remote Environment:**
 - ssh into a remote server
 - Open neovim and nvim-tree
-- Navigate to the file you want to download in nvim-tree
-- Press `<leader>r` to upload the file
+- Navigate to the file you want to upload in nvim-tree
+- Press `<leader>r` to upload the file (trz)
 
-or 
-- Navigate to the directory you want to upload files to in nvim-tree
+or
+- Navigate to the directory you want to download files to in nvim-tree
 - Press `<leader>s`, and the file explorer will open
-- Select the files you want to upload
+- Select the files you want to download (tsz)
+
+**Local Environment:**
+- **Copy current file/directory**: Navigate to a file or directory in nvim-tree, press `<leader>r`, then enter destination directory
+- **Copy file to current location**: Navigate to destination directory in nvim-tree, press `<leader>s`, then select source file/directory
+- **Open file manager**: Navigate to any directory in nvim-tree, press `<leader>o` to open system file manager
 
 ## TODO
 - [ ] Automatically install trzsz on the remote machine.
