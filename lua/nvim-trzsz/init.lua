@@ -250,6 +250,10 @@ function M.nvim_tree_open()
 		return
 	end
 
+  if is_remote() then
+    return
+  end
+
 	local node = api.tree.get_node_under_cursor()
 	if not node then
 		return
